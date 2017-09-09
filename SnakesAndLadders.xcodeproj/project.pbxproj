@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8805ED251F64A1E100780737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8805ED241F64A1E100780737 /* main.m */; };
 		8805ED2D1F64A35400780737 /* InputCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 8805ED2B1F64A35400780737 /* InputCollector.m */; };
+		8805ED301F64A7E500780737 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 8805ED2F1F64A7E500780737 /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		8805ED241F64A1E100780737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8805ED2B1F64A35400780737 /* InputCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputCollector.m; path = "../../Contact List/Contact List/InputCollector.m"; sourceTree = "<group>"; };
 		8805ED2C1F64A35400780737 /* InputCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputCollector.h; path = "../../Contact List/Contact List/InputCollector.h"; sourceTree = "<group>"; };
+		8805ED2E1F64A7E500780737 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		8805ED2F1F64A7E500780737 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				8805ED241F64A1E100780737 /* main.m */,
+				8805ED2E1F64A7E500780737 /* Player.h */,
+				8805ED2F1F64A7E500780737 /* Player.m */,
 				8805ED2B1F64A35400780737 /* InputCollector.m */,
 				8805ED2C1F64A35400780737 /* InputCollector.h */,
 			);
@@ -125,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8805ED2D1F64A35400780737 /* InputCollector.m in Sources */,
+				8805ED301F64A7E500780737 /* Player.m in Sources */,
 				8805ED251F64A1E100780737 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
