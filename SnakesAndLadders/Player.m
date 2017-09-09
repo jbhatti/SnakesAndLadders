@@ -11,6 +11,11 @@
 @implementation Player
 
 
+-(void) roll {
+    int diceRolls;
+    diceRolls = arc4random_uniform(5) + 1;
+    NSLog(@"%i", diceRolls);
+
 }
 
 @end

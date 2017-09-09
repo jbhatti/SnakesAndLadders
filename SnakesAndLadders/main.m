@@ -8,17 +8,27 @@
 
 #import <Foundation/Foundation.h>
 #import "InputCollector.h"
+#import "Player.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         BOOL gameOn = YES;
         
+        Player *newPlayer = [[Player alloc] init];
+        
         while(gameOn) {
             
             InputCollector *newInputCollector = [[InputCollector alloc] init];
             
             NSString *userInput = [newInputCollector inputForPrompt:@"type ""roll"" or ""r"""];
+            
+            if ([userInput isEqual: @"roll"]) {
+                    [newPlayer roll];
+            } else {
+                NSLog(@"try again");
+            }
+            
             
             
         }
