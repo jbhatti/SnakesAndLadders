@@ -7,11 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "InputCollector.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        BOOL gameOn = YES;
+        
+        while(gameOn) {
+            
+            InputCollector *newInputCollector = [[InputCollector alloc] init];
+            
+            NSString *userInput = [newInputCollector inputForPrompt:@"type ""roll"" or ""r"""];
+            
+            
+        }
     }
     return 0;
 }
