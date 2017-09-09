@@ -21,7 +21,7 @@ int main(int argc, const char * argv[]) {
             
             InputCollector *newInputCollector = [[InputCollector alloc] init];
             
-            NSString *userInput = [newInputCollector inputForPrompt:@"type ""roll"" or ""r"""];
+            NSString *userInput = [newInputCollector inputForPrompt:@"type ""roll"""];
             
             if ([userInput isEqual: @"roll"]) {
                     [newPlayer roll];
