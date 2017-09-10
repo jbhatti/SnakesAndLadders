@@ -12,6 +12,7 @@
 
 @property NSInteger currentSquare;
 @property NSDictionary* gameLogic;
+@property NSString* output;
 
 -(void) roll;
 

@@ -44,12 +44,22 @@
     
     //assign NSNum var to value of key
     NSNumber *newValue = [_gameLogic objectForKey:convertCurrentSquare];
-
+    
+    
     if (newValue) {
+        //convert NSNum to NSInt
         NSInteger newCurrentSquare = [newValue integerValue];
+        
+        if (newCurrentSquare > _currentSquare){
+            _output = [NSString stringWithFormat:@"Stairway to heaven you went up from %lu to %lu", _currentSquare, newCurrentSquare];
+            NSLog(@"%@", _output);
+        } else if (newCurrentSquare < _currentSquare) {
+            _output = [NSString stringWithFormat:@"Snake attack! You went up from %lu to %lu", newCurrentSquare, _currentSquare];
+            NSLog(@"%@", _output);
+        }
         _currentSquare = newCurrentSquare;
     }
-    
+        
     NSLog(@"You are now at %li", (long)_currentSquare);
 }
 
