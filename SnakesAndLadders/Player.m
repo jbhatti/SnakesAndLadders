@@ -60,6 +60,8 @@
         }
         _currentSquare = newCurrentSquare;
     }
+
+        NSLog(@"You are now at %li", (long)_currentSquare);
     
     if (_currentSquare >= 100) {
         _output = [NSString stringWithFormat:@"You reached the top! You win!"];
@@ -67,7 +69,7 @@
         _gameOver = YES;        
     }
     
-    NSLog(@"You are now at %li", (long)_currentSquare);
+
 }
 
 @end
