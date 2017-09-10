@@ -25,11 +25,11 @@ int main(int argc, const char * argv[]) {
             
             if ([userInput isEqual: @"roll"]) {
                     [newPlayer roll];
-            } else {
-                NSLog(@"try again");
+                if (newPlayer.gameOver == YES) {
+                    break;
+                }
+            
             }
-            
-            
             
         }
     }

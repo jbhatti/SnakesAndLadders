@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        _currentSquare = 0;
+        _currentSquare = 90;
         _gameLogic = @{@4:@14,
                        @9:@31,
                        @17:@7,
@@ -27,6 +27,7 @@
                        @89:@26,
                        @95:@75,
                        @99:@78};
+        _gameOver = NO;
     }
     return self;
 }
@@ -59,7 +60,13 @@
         }
         _currentSquare = newCurrentSquare;
     }
-        
+    
+    if (_currentSquare >= 100) {
+        _output = [NSString stringWithFormat:@"You reached the top! You win!"];
+        NSLog(@"%@", _output);
+        _gameOver = YES;        
+    }
+    
     NSLog(@"You are now at %li", (long)_currentSquare);
 }
 
