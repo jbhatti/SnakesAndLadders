@@ -32,10 +32,24 @@
 }
 
 -(void) roll {
+    
+    
     int diceRolls;
     diceRolls = arc4random_uniform(5) + 1;
     _currentSquare += diceRolls;
     NSLog(@"The dice rolled %i", diceRolls);
+    
+    //convert NSInt to NSNum
+    NSNumber *convertCurrentSquare = @(self.currentSquare);
+    
+    //assign NSNum var to value of key
+    NSNumber *newValue = [_gameLogic objectForKey:convertCurrentSquare];
+
+    if (newValue) {
+        NSInteger newCurrentSquare = [newValue integerValue];
+        _currentSquare = newCurrentSquare;
+    }
+    
     NSLog(@"You are now at %li", (long)_currentSquare);
 }
 
