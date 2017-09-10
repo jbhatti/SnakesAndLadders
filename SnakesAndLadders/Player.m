@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        _currentSquare = 90;
+        _currentSquare = 0;
         _gameLogic = @{@4:@14,
                        @9:@31,
                        @17:@7,

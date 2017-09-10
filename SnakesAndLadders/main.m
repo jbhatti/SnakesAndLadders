@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "InputCollector.h"
+#import "PlayerManager.h"
 #import "Player.h"
 
 int main(int argc, const char * argv[]) {
@@ -15,21 +16,32 @@ int main(int argc, const char * argv[]) {
         
         BOOL gameOn = YES;
         
+        PlayerManager *newPlayerManager = [[PlayerManager alloc] init];
         Player *newPlayer = [[Player alloc] init];
         
         while(gameOn) {
             
             InputCollector *newInputCollector = [[InputCollector alloc] init];
             
-            NSString *userInput = [newInputCollector inputForPrompt:@"type ""roll"""];
+            NSString *amountOfUsers = [newInputCollector inputForPrompt:@"Please input the number of players:"];
+            NSInteger amountOfUsersInNum = [amountOfUsers intValue];
             
-            if ([userInput isEqual: @"roll"]) {
+            if (amountOfUsersInNum <= 0) {
+                NSLog(@"You entered 0 or a non-numeric value. Please input a nonzero numeric value:");
+                [newInputCollector inputForPrompt:@"Please input the number of players:"];
+            } else {                
+                NSString *userInput = [newInputCollector inputForPrompt:@"type ""roll"""];
+                
+                if ([userInput isEqual: @"roll"]) {
                     [newPlayer roll];
-                if (newPlayer.gameOver == YES) {
-                    break;
+                    if (newPlayer.gameOver == YES) {
+                        break;
+                    }
+                    
                 }
-            
             }
+            
+            
             
         }
     }
